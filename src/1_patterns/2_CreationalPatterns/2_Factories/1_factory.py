@@ -1,3 +1,14 @@
+"""
+factory is a creational design pattern that is used to create objects.
+
+
+alternative to initializer; 
+convenient way of creation of objects 
+
+
+tiny little static methods which initilizes the objects for you 
+
+"""
 from enum import Enum
 from math import *
 

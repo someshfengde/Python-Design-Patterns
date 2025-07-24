@@ -4,5 +4,10 @@ class Person:
         self.name = name
 
 class PersonFactory:
+    def __init__(self):
+        self._current_id = 0
+
     def create_person(self, name):
-        # todo
+        person = Person(self._current_id, name)
+        self._current_id += 1
+        return person
