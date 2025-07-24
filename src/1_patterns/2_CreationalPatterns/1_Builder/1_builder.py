@@ -1,3 +1,10 @@
+"""
+when peicewise construction is complicated, we can use a builder to construct the object step by step.
+
+
+
+"""
+
 class HtmlElement:
     indent_size = 2
 

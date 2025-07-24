@@ -1,3 +1,13 @@
+"""
+we can use inheritance to build the object step by step.
+
+the top level builder is the PersonBuilder and the bottom level builder is the PersonBirthDateBuilder.
+
+after initializing the PersonBuilder, we can call the methods in an order to build the object.
+
+the build method is called at the end to return the object.
+"""
+
 class Person:
     def __init__(self):
         self.name = None
@@ -40,8 +50,8 @@ class PersonBirthDateBuilder(PersonJobBuilder):
 if __name__ == '__main__':
     pb = PersonBirthDateBuilder()
     me = pb\
-        .called('Dmitri')\
         .works_as_a('quant')\
         .born('1/1/1980')\
+        .called('Dmitri')\
         .build()  # this does NOT work in C#/C++/Java/...
     print(me)

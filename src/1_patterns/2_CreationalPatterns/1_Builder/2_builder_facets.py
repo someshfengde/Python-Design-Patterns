@@ -1,4 +1,11 @@
+"""
+making a serveral builders for different facets of a person
+we can use a facade to build the person object
+
+complex objects will be created using the multiple builders 
+"""
 class Person:
+    
     def __init__(self):
         print('Creating an instance of Person')
         # address
