@@ -1,3 +1,6 @@
+"""
+if we have some interface as a base class and other classes can inherit and override the methods of the base class.
+"""
 class Rectangle:
     def __init__(self, width, height):
         self._height = height
@@ -48,7 +51,7 @@ def use_it(rc):
 
 
 rc = Rectangle(2, 3)
-use_it(rc)
+use_it(rc) # Expected 20 and got 20
 
 sq = Square(5)
-use_it(sq)
+use_it(sq) # Expected  and got 50

@@ -1,3 +1,12 @@
+"""
+Interface Segregation Principle
+
+making interfaces which features too many elements is not a good idea 
+we have to make small interfaces and then we can combine them to make a bigger interface.
+
+make smaller interfaces so that peeps don't have to implement what they don't need 
+
+"""
 from abc import abstractmethod
 
 

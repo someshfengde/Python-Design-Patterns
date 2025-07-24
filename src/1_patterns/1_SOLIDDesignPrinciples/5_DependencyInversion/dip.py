@@ -1,3 +1,12 @@
+"""
+Dependency Inversion Principle
+
+we don't want to access the low level modules directly from the high level modules.
+
+we should depend on abstractions not on concretions.
+
+implement methods into the low level modules so that we can use them in high level modules directly 
+"""
 from abc import abstractmethod
 from enum import Enum
 
@@ -18,7 +27,7 @@ class RelationshipBrowser:
     def find_all_children_of(self, name): pass
 
 
-class Relationships(RelationshipBrowser):  # low-level
+class Relationships(RelationshipBrowser):  # low-level module 
     relations = []
 
     def add_parent_and_child(self, parent, child):
@@ -31,7 +40,7 @@ class Relationships(RelationshipBrowser):  # low-level
                 yield r[2].name
 
 
-class Research:
+class Research: # high level module 
     # dependency on a low-level module directly
     # bad because strongly dependent on e.g. storage type
 
@@ -57,3 +66,5 @@ relationships.add_parent_and_child(parent, child1)
 relationships.add_parent_and_child(parent, child2)
 
 Research(relationships)
+
+

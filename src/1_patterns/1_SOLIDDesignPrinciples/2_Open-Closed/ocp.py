@@ -1,3 +1,11 @@
+"""
+some classes can be closed while some can be open.
+
+we should be able to extend a class without modifying it.
+ OCP = open for extension, closed for modification
+
+
+"""
 from enum import Enum
 
 

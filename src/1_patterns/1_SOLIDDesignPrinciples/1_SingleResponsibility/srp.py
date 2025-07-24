@@ -1,3 +1,11 @@
+"""
+seperation of concerns 
+class should have it's primary responsibility and it should not be responsible for other things
+
+@staticmethod 
+
+we can instantinate this method without have to initilize the class.
+"""
 class Journal:
     def __init__(self):
         self.entries = []
@@ -14,16 +22,16 @@ class Journal:
         return "\n".join(self.entries)
 
     # break SRP
-    def save(self, filename):
-        file = open(filename, "w")
-        file.write(str(self))
-        file.close()
+    # def save(self, filename):
+    #     file = open(filename, "w")
+    #     file.write(str(self))
+    #     file.close()
 
-    def load(self, filename):
-        pass
+    # def load(self, filename):
+    #     pass
 
-    def load_from_web(self, uri):
-        pass
+    # def load_from_web(self, uri):
+    #     pass
 
 
 class PersistenceManager:
